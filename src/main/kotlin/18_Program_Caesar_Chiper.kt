@@ -1,0 +1,26 @@
+fun main(args: Array<String>) {
+//Program Caesar cipher
+    /*
+    Program ini mengenkripsi sebuah input text String yang diberikan kedalam karakter yang
+    dinaikan atau diturunkan.
+     */
+
+// inisialisasi variabel
+    val s = "blackholesarewheregoddividedbyzero"
+    println("Original message: $s")
+    var message = ""
+    var shift = 1
+
+// loop iterating over characters
+    for (c in s) {
+        var i = c.toInt()
+        i += shift
+        if (i > 'z'.toInt()) {
+            i -= 26
+        }
+        val char = i.toChar()
+        message += char
+    }
+// mencetak message
+    println("Encrypted message: $message")
+}
